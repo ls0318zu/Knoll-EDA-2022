@@ -1,35 +1,25 @@
 ---
-
 output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-#_TITLE
-
-AUTHORS
-
-Affiliations
-
-## GitHub Documents
-
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
-
-## Including Code
-
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
 ```
 
-## Including Plots
+# Predicting Human wolf Conflict in Minnesota
 
-You can also embed plots, for example:
+Kameron Knoll
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+Bio sciences Department, Minnesota State University Moorhead, 1104 7th Avenue South, Moorhead, MN 56563
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Abstract
+
+## Introduction
+
+## Acknowledgements
+
+Thanks to my group members g
