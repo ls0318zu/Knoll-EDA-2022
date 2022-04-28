@@ -1,7 +1,7 @@
 library(tidyverse)
 library(readxl)
-install.packages("devtools")
-devtools::install_github("UrbanInstitute/urbnmapr")
+# install.packages("devtools")
+# devtools::install_github("UrbanInstitute/urbnmapr")
 library(urbnmapr)
 library(sf)
 library(units)
@@ -30,7 +30,7 @@ popul_data %>%
 
 counties_sf <- get_urbn_map(map = "counties", sf = TRUE)
 
-
+# figure 1 prediction of human-wolf conflict
 counties_sf %>% 
   filter(state_name == "Minnesota") %>%
   mutate(
@@ -51,6 +51,7 @@ counties_sf %>%
        subtitle = "Ratio of Wolf Density to Human Density",
        title = "Prediction of Human-Wolf Conflict")
 
+# figure 2 prediction of wolf predation on cattle
 counties_sf %>% 
   filter(state_name == "Minnesota") %>%
   mutate(
@@ -71,5 +72,16 @@ counties_sf %>%
        subtitle = "Ratio of Wolf Density to Cattle Density", 
        title = "Prediction of Wolf Predation on Cattle")
 
+ # figure 3 scatter-plot of human and wolf populations in Minnesota counties
+ggplot(data= all_data, aes(x=population, y=n_wolves))+
+  geom_point()+
+  scale_x_log10()+
+  scale_y_log10()+
+  geom_smooth(method = "lm")+
+  labs(
+    title="human and wolf populations in Minnesota counties",
+    x="human population",
+    y="wolf population")
+  
   
 
