@@ -79,7 +79,7 @@ ggplot(data= all_data, aes(x=population, y=n_wolves))+
     y="wolf population")
 ```
 
-#### Figure 2. A scatter-plot of wolf, cattle, and human populations in Minnesota. 
+#### Figure 2. A scatter-plot of wolf, cattle, and human populations in Minnesota.
 
 ```{r}
 library(tidyverse)
